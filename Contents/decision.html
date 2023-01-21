@@ -1,0 +1,157 @@
+<!--This Website is to help all the students learning C programming-->
+<!DOCTYPE html>
+<html>
+<head>
+<table style="border:2px solid green"><tr><td><a href="../index.html">Home</a></td></tr></table>
+
+<title> Decision Control</title>
+</head>
+<body>
+<h1 style="text-align:center">Decision Control Statements</h1>
+<h2><u>4.1 if statement</u></h2>
+<p>In Python, the if statement is used to perform different actions based on whether a certain condition is true or false. It allows you to control the flow of 
+your program by executing certain blocks of code only if certain conditions are met.</p>
+<h4><u>Different forms of implementation of if-statement are:</u></h4>
+<ul>
+	<li>Basic if-statement:</li>
+	<li>if-else statement</li>
+	<li>if-elif-else statement</li>
+	<li>Nested if statement</li>
+	<li>One-liner if-statement (also called ternary operator):</li>
+</ul>
+<h4><u>if statement</u></h4>
+<p> This is used to executed the statements only if the condition is <b>true.</b></p>
+<h4><u>Syntax</u></h4>
+<pre>
+<table style="border:2px solid green"><tr><td>
+  if condition:
+  #code to be executed if the condition is true
+	
+</tr></td></table></pre>
+<h4><u>Example</u></h4>
+<pre>
+x = 5
+if<b style="color:magenta"> x </b>> 0:
+  print("x is positive")
+
+<i>In this example, the if statement checks if the value of the variable x is greater than 0. If it is, the code inside the if block, 
+print("x is positive"), is executed.</i>
+</pre>
+
+<h2><u>4.2 if-else statement</u></h2>
+n if-else statement in Python is used to specify what code should be executed when a certain condition is true, and what code should be 
+executed when the condition is false. The basic syntax for an if-else statement is:
+<h4><u>Synstax:</u></h4>
+<pre>
+if condition:
+    # code to be executed if the condition is true
+else:
+    # code to be executed if the condition is false
+
+</pre>
+<p> if condition is true then block 1 statement will be executed and if condition is false block 2 statement will execute.</p>
+<h4><u>Example</u></h4>
+<pre>
+x = 5
+if x > 0:
+    print("x is positive")
+else:
+    print("x is not positive")
+
+</pre>
+<h4><u>Output:</u></h4>
+<pre>
+	x is positive
+</pre>
+<h2><u>4.3 if-elif-else statement</u></h2>
+<p>An if-elif-else statement in Python is used to check multiple conditions and execute different code blocks based on which condition is true. The basic syntax for an if-elif-else statement is:</p>
+<h4><u>Syntax:</u></h4>
+<pre>
+if condition1:
+    # code to be executed if condition1 is true
+elif condition2:
+    # code to be executed if condition2 is true
+...
+elif conditionN:
+    # code to be executed if conditionN is true
+else:
+    # code to be executed if all conditions are false
+
+</pre>
+
+<h4><u>Example:</u></h4>
+<pre>
+x = -5
+if x > 0:
+    print("x is positive")
+elif x == 0:
+    print("x is zero")
+else:
+    print("x is negative")
+
+</pre>
+<h4><u>Output:</u></h4>
+<pre>
+	x is negative
+</pre>
+<h2><u>4.4 Nested if statement</u></h2>
+<p>A nested if statement in Python is an if statement that is used inside another if statement. The basic syntax for a nested if statement is:</p>
+<h4><usyntax</u></h4>
+<h4><u>Synstax:</u></h4>
+<pre>
+if condition1:
+    # code to be executed if condition1 is true
+    if condition2:
+    # code to be executed if condition2 is true
+    else:
+    # code to be executed if condition2 is false
+else:
+    # code to be executed if condition1 is false
+
+</pre>
+<h4><u>Example:</u></h4>
+<pre>
+x = 10
+y = 20
+if x > 0:
+    print("x is positive")
+    if y > 0:
+        print("y is positive")
+    else:
+        print("y is not positive")
+else:
+    print("x is not positive")
+
+</pre>
+<h4><u>Output:</u></h4>
+<pre>
+	x is positive
+	y is positive
+
+In this example, the outer if statement checks if the value of the variable x is greater than 0. If it is true, the code inside the first if block will 
+be executed, which is print("x is positive"). Then, the inner if statement checks if the value of the variable y is greater than 0. If it is true, the code 
+inside the second if block will be executed, which is print("y is positive"). If y is not greater than 0, the code inside the else block, 
+print("y is not positive"), is executed. If x is not greater than 0, the code inside the outer else block, print("x is not positive"), is executed.</i>
+</pre>
+
+<h2><u>4.5 A one-liner if statement</u></h2>
+<p>A one-liner if statement in Python is a way to write an if statement on a single line of code, it's also known as a ternary operator. 
+The basic syntax for a one-liner if statement is:</p>
+<h4><u>Syntax:</u></h4>
+<pre>
+value_if_true if condition else value_if_false
+</pre>
+<h4><u>Example:</u></h4>
+<pre>
+x = -5
+print("x is positive") if x > 0 else print("x is not positive")
+
+In this case, the statement will directly print the corresponding message without the need of a variable.
+It's worth noting that one-liner if statements are useful when you need to perform a simple action based on a condition, 
+and you want to keep your code short and easy to read. However, it's recommended to use the standard if-else statement when the code block
+is more complex or when you need to perform multiple actions based on the condition.
+It's also important to note that one-liner if statement can be more difficult to understand, especially when the condition and the action to be executed are more complex.
+</pre>
+</table><table style="border:2px solid green"><tr><td><a href="../content.html">Back</a></td></tr></table>			
+</body>
+</html>

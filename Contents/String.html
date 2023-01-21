@@ -1,0 +1,70 @@
+<!--This Website is to help all the students learning Python programming-->
+<!DOCTYPE html>
+<html>
+<head>
+<table style="border:2px solid green"><tr><td><a href="../index.html">Home</a></td></tr></table>
+<title> Functions </title>
+</head>
+<body>
+<h1 style="text-align:center"> <u>Strings</u> </h1>
+<h2><u>Strings</u> </h2>
+<p>In Python, a string is a sequence of characters enclosed in quotes (single or double).
+</p>
+<pre><table style="border:2px solid green"><tr><td>
+For example:
+string1 = "Hello World!"
+string2 = 'Hello World!'
+#Both string1 and string2 are valid strings in Python.
+</td></tr></table></pre>
+
+You can use the plus (+) operator to concatenate two strings together, like this:
+<pre><table style="border:2px solid green"><tr><td>
+string3 = string1 + " " + string2
+print(string3)
+# Output: "Hello World! Hello World!"
+
+</td></tr></table></pre>
+
+You can also use the * operator to repeat a string a certain number of times:
+<pre><table style="border:2px solid green"><tr><td>
+string4 = "Hello " * 3
+print(string4)
+# Output: "Hello Hello Hello "
+</td></tr></table></pre>
+
+Python also provides a number of built-in methods for working with strings, including:
+
+<li>len(): Returns the number of characters in a string</li>
+<li>str.upper(): Converts all characters in a string to uppercase</li>
+<li>str.lower(): Converts all characters in a string to lowercase</li>
+<li>str.replace(old, new): Replaces all occurrences of a specified string with a new string</li>
+<li>str.split(separator): Splits a string into a list of substrings based on a specified separator</li>
+<li>str.join(iterable): Joins a list of strings with the string on which this method is called as a separator.</li>
+<li>str.strip(): Removes leading and trailing whitespace from a string</li>
+<p>You can access individual characters of a string using indexing, for example string1[1] will give e.</br>
+You can also use slicing to access a range of characters in a string, for example string1[1:4] will give ell</br>
+You can use the in keyword to check if a substring is present in a string, like this:</br>
+</p>
+You can use the in keyword to check if a substring is present in a string, like this:
+
+<pre><table style="border:2px solid green"><tr><td>
+print("Hello" in string1)
+# Output: True
+</td></tr></table></pre>
+You can also use string formatting to insert values into a string using placeholders, like this:
+<pre><table style="border:2px solid green"><tr><td>
+name = "John"
+age = 30
+print("My name is {} and I am {} years old.".format(name, age))
+# Output: "My name is John and I am 30 years old."
+</td></tr></table></pre>
+In python 3.6 and above you can use f-strings for string formatting as well:
+<pre><table style="border:2px solid green"><tr><td>
+name = "John"
+age = 30
+print(f"My name is {name} and I am {age} years old.")
+# Output: "My name is John and I am 30 years old."
+</td></tr></table></pre>
+</table><table style="border:2px solid green"><tr><td><a href="../content.html">Back</a></td></tr></table>
+</body>
+</html>
