@@ -1,0 +1,149 @@
+<!--This Website is to help all the students learning Python programming-->
+<!DOCTYPE html>
+<html>
+<head>
+<table style="border:2px solid green"><tr><td><a href="../index.html">Home</a></td></tr></table>
+
+<title> Functions </title>
+</head>
+<body>
+<h1 style="text-align:center"> <u>Functions</u> </h1>
+<h2><u>6.1 Introduction of function</u> </h2>
+<p>In Python, a function is a block of code that performs a specific task and can be called multiple times in a program. 
+Functions are used to organize and structure code, making it more readable and reusable.
+Functions are defined using the<b> def</b> keyword, followed by the function name, a set of parentheses, and a colon. 
+The code that makes up the function is indented under the definition. The basic syntax for a function is:
+</p>
+<pre><table style="border:2px solid green"><tr><td>
+def function_name(parameters):
+    # code to be executed
+</td></tr></table></pre>
+
+<b>Creating a Function</b> 
+In Python a function is defined using the def keyword: 
+<pre><table style="border:2px solid green"><tr><td>
+Example def my_function(): 
+	print("Hello from a function") 
+</td></tr></table></pre>
+
+<b>Calling a Function </b>
+To call a function, use the function name followed by parenthesis: 
+<pre><table style="border:2px solid green"><tr><td>
+Example def my_function(): 
+	print("Hello from a function")
+	 my_function() 
+</td></tr></table></pre>
+<b>Parameters</b>Parameters Information can be passed to functions as parameter. Parameters are specified after the function name, inside the parentheses. 
+You can add as many parameters as you want, just separate them with a comma. The following example has a function with one parameter (fname). 
+When the function is called, we pass along a first name, which is used inside the function to print the full name:
+
+<pre><table style="border:2px solid green"><tr><td>
+Example def my_function(fname): 
+	print(fname + " Refsnes") my_function("Emil") my_function("Tobias") my_function("Linus") 
+</td></tr></table></pre>
+
+<b>Default Parameter Value </b>The following example shows how to use a default parameter value. If we call the function without parameter, it uses the default value:
+
+<pre><table style="border:2px solid green"><tr><td>
+Example def my_function(country = "Norway"): 
+	print("I am from " + country) my_function("Sweden") my_function("India") my_function() my_function("Brazil") 
+</td></tr></table></pre>
+<p>
+Passing a List as a Parameter You can send any data types of parameter to a function (string, number, list, dictionary etc.), and it will be 
+treated as the same data type inside the function. E.g. if you send a List as a parameter, it will still be a List when it reaches the function: 
+</p>
+<pre><table style="border:2px solid green"><tr><td>
+Example def my_function(food): 
+	for x in food: print(x) fruits = ["apple", "banana", "cherry"] 
+	my_function(fruits) 
+</td></tr></table></pre>
+<b>Return Values</b>
+To let a function return a value, use the return statement: 
+<pre><table style="border:2px solid green"><tr><td>
+Example def my_function(x): 
+	return 5 * x 
+	print(my_function(3)) 
+	print(my_function(5)) 
+	print(my_function(9)) 
+</td></tr></table></pre>
+
+<b>Recursion</b>Recursion Python also accepts function recursion, which means a defined function can call itself. Recursion is a common 
+mathematical and programming concept. It means that a function calls itself. This has the benefit of meaning that you can loop through data to reach a result. 
+The developer should be very careful with recursion as it can be quite easy to slip into writing a function which never terminates, or one that uses excess 
+amounts of memory or processor power. However, when written correctly recursion can be a very efficient and mathematically-elegant approach to programming.
+
+
+<h2>Arbitrary Arguments</h2>
+<p>In Python, we can use arbitrary arguments (also known as "varargs" or "*args") to allow a function to accept an arbitrary number of arguments.
+These arguments are passed to the function as a tuple.To define a function with arbitrary arguments, we use the "*" symbol before the argument 
+name in the function definition
+</p>
+
+<pre><table style="border:2px solid green"><tr><td>
+Example:
+    def my_function(*args):
+    	for arg in args:
+           print(arg)
+</td></tr></table></pre>
+<p>In this example, the function my_function() accepts an arbitrary number of arguments and prints each one. The args is a tuple of all the arguments 
+passed to the function.When calling the function, we can pass any number of arguments.
+</p>
+<pre><table style="border:2px solid green"><tr><td>
+my_function(1, 2, 3)
+</td></tr></table></pre>
+<h3>Output</h3>
+<pre><table style="border:2px solid green"><tr><td>
+1
+2
+3
+</td></tr></table></pre>
+
+<h3>Arbitrary Keyword Arguments</h3>
+<p>An arbitrary keyword argument is a type of argument that allows a function to accept an unspecified number of keyword arguments. 
+It is defined in Python using the double asterisk (**) syntax before the argument name. For example, in the function definition 
+"def my_function(**kwargs)", the parameter "kwargs" would accept any number of keyword arguments passed to the function. 
+These arguments can then be accessed within the function using the dictionary-like syntax.
+</p>
+<pre><table style="border:2px solid green"><tr><td>
+Example: 
+def my_function(**kwargs):
+    # function code here
+
+</td></tr></table></pre>
+<p>
+Here, **kwargs is the arbitrary keyword argument. It allows the function to accept any number of keyword arguments. 
+These arguments can then be accessed within the function using the dictionary-like syntax.
+For example, consider the following function which takes arbitrary keyword argument and it prints all the keyword arguments passed to it:
+</p>
+</td></tr></table></pre>
+<pre><table style="border:2px solid green"><tr><td>
+Example:
+def print_kwargs(**kwargs):
+    for key, value in kwargs.items():
+        print(f'{key} : {value}')
+print_kwargs(name='John', age=25, city='New York')
+</td></tr></table></pre>
+
+<pre><table style="border:2px solid green"><tr><td>
+
+<b>Output:</b>
+# name : John
+# age : 25
+# city : New York
+</td></tr></table></pre>
+
+<h3>Lambda</h3>
+In Python, a lambda function is a small anonymous function that can take any number of arguments, but can only have one expression. 
+The syntax for a lambda function is as follows:
+lambda arguments: expression
+<pre><table style="border:2px solid green"><tr><td>
+Example:
+add = lambda x, y: x + y
+result = add(2, 3)
+print(result)
+# Output: 5
+</td></tr></table></pre>
+
+</table><table style="border:2px solid green"><tr><td><a href="../content.html">Back</a></td></tr></table>
+</body>
+</html>
