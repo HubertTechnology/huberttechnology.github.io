@@ -1,0 +1,411 @@
+<!--This Website is to help all the students learning Python programming-->
+<!DOCTYPE html>
+<html>
+<head>
+<table style="border:2px solid green"><tr><td><a href="index.html">Home</a></td></tr></table>
+<title>Sequence Data Types</title>
+<h2><u>Sequence Data Types</h2></u>
+</head>
+<p>
+<b>Python Collections (Arrays)</b> There are four collection data types in the Python programming language: 
+<li><b> List</b>  is a collection which is ordered and changeable. Allows duplicate members. </li>
+<li><b> Tuple</b>  is a collection which is ordered and unchangeable. Allows duplicate members. </li>
+<li><b>Set</b>  is a collection which is unordered and unindexed. No duplicate members. </li>
+<li><b>Dictionary</b> is a collection which is unordered, changeable and indexed. No duplicate members. When choosing a collection type, it is useful to
+ understand the properties of that type. Choosing the right type for a particular data set could mean retention of meaning, and, it could meanan increase in efficiency or security.</li>
+</p>
+
+<h3><u>1. Python List</u></h3>
+A list is a collection which is ordered and changeable. In Python lists are written with square brackets.
+<p>
+<table style="border:2px solid black">
+	<tr> <td>Example of creating a List:
+<pre style="font-size:110%">
+	#Print a List of items
+	<b style="color:red">thislist</b> = ["apple", "banana", "cherry"]
+	<b style="color:green">print</b>(thislist) # returns ['apple', 'banana', 'cherry']
+   </td></tr>
+</table>
+</pre>
+
+	<h3>Access Items </h3>
+<pre style="font-size:110%">
+<b>You access the list items by referring to the index number:</b>
+	<table style="border:1px solid black">
+	<tr> <td>Example Print the second item of the list:
+	<b style="color:red">thislist </b>= <b style="color:green">["apple", "banana", "cherry"]</b>
+ 	print(thislist[1]) # returns banana
+</td></tr></table>
+
+<b>Change Item Value:</b> To change the value of a specific item,refer to the index number:
+<pre style="font-size:110%">
+<table style="border:1px solid black">
+<tr> <td>
+ <b>Example Change the second item:</b>
+ 	<b style="color:red">thislist</b> =<b style="color:green">" ["apple", "banana", "cherry"] thislist[1] = "grapes"</b> 
+ 	<b style="color:green">print</b>(thislist) # returns ['apple', 'grapes', 'cherry'] 
+</td></tr></table>
+
+
+<b>Loop through a List:</b> You can loop through the list items by using a for loop:
+<table>
+<pre style="font-size:110%">
+<table style="border:1px solid black">
+<tr> <td>
+Example Print all items in the list, one by one:
+ 
+	<b style="color:red">thislist</b> = <b style="color:green">["apple", "banana", "cherry"]</b>
+ 	for<b style="color:red"> x</b> in thislist:
+          print(x)
+
+</tr></td></table>
+
+
+<b>Check if Item Exists</b> 
+To determine if a specified item is present in a list use the in keyword:
+<table>
+<pre style="font-size:110%">
+<table style="border:1px solid black">
+<tr> <td>
+Example Check if "apple" is present in the list: 
+	<b style="color:red"> thislist </b>= <b style="color:green"> ["apple", "banana", "cherry"] </b>
+	if "apple" in thislist:
+ 	    print("Yes, 'apple' is in the fruits list")
+</tr></td></table>
+
+<b>List Length</b>
+To determine how many items a list has, use the len() method:
+<table>
+<pre style="font-size:110%">
+<table style="border:1px solid black">
+<tr> <td>
+Example Print the number of items in the list:
+	 <b style="color:red">thislist </b>= ["apple", "banana", "cherry"]
+	 print(len(thislist)) # returns 3 
+</tr></td></table>
+
+
+<b>Add Items</b>
+To add an item to the end of the list, use the append() method:
+<table>
+<pre style="font-size:110%">
+<table style="border:1px solid black">
+<tr> <td>
+Example Using the append() method to append an item:
+ 	<b style="color:red">thislist </b>= ["apple", "banana", "cherry"]	
+	thislist.append("orange")
+	print(thislist) # returns ['apple', 'banana', 'cherry', 'orange']
+</tr></td></table>
+<b>To add an item at the specified index, use the insert() method:
+</b><table>
+<pre style="font-size:110%">
+<table style="border:1px solid black">
+<tr> <td>
+Example Insert an item as the second position:
+	<b style="color:red">thislist </b>= ["apple", "banana", "cherry"]
+	thislist.insert(1, "orange") 
+	print(thislist) # returns ['apple', 'orange', 'banana', 'cherry'] 
+</tr></td></table>
+<b>Remove Item</b>
+There are several methods to remove items from a list: 
+<table>
+<pre style="font-size:110%">
+<table style="border:1px solid black">
+<tr> <td>
+Example The remove() method removes the specified item:
+	<b style="color:red">thislist </b>= ["apple", "banana", "cherry"] 
+	thislist.remove("banana") print(thislist) # returns ['apple', 'cherry'] 
+
+</tr></td></table>
+<table>
+<pre style="font-size:110%">
+<table style="border:1px solid black">
+<tr> <td>
+Example The pop() method removes the specified index, (or the last item if index is not specified):
+	<b style="color:red">thislist </b>= ["apple", "banana", "cherry"] 
+	thislist.pop() print(thislist) # returns ['apple', 'banana'] 
+</tr></td></table>
+
+<table>
+<pre style="font-size:110%">
+<table style="border:1px solid black">
+<tr> <td>
+Example The del keyword removes the specified index: 
+	<b style="color:red">thislist </b>= ["apple", "banana", "cherry"] 
+	del thislist[0] print(thislist) # returns ['banana', 'cherry'] 
+</tr></td></table>
+<table>
+<pre style="font-size:110%">
+<table style="border:1px solid black">
+<tr> <td>
+Example The del keyword can also delete the list completely:
+	 <b style="color:red">thislist</b> = ["apple", "banana", "cherry"] 
+	del thislist 
+</tr></td></table>
+<table>
+<pre style="font-size:110%">
+<table style="border:1px solid black">
+<tr> <td>
+Example The clear() method empties the list:
+	<b style="color:red">thislist</b> = ["apple", "banana", "cherry"] 
+	thislist.clear()
+	print(thislist) # returns []
+</tr></td></table>
+<b>Copy a List</b>
+You cannot copy a list simply by typing list2 = list1, because: list2 will only be a reference to list1, and changes made in list1 will 
+automatically also be made in list2. There are ways to make a copy, one way is to use the built-in List method copy().
+<table>
+<pre style="font-size:110%">
+<table style="border:1px solid black">
+<tr> <td>
+Example Make a copy of a list with the copy() method:
+	<b style="color:red">thislist</b> = ["apple", "banana", "cherry"] 
+	mylist = thislist.copy() 
+	print(mylist) # returns ['apple', 'banana', 'cherry'] 
+</tr></td></table>
+Another way to make a copy is to use the built-in method list().
+<table>
+<pre style="font-size:110%">
+<table style="border:1px solid black">
+<tr> <td>
+Example Make a copy of a list with the list() method:
+	<b style="color:red">thislist</b> = ["apple", "banana", "cherry"] 
+	mylist = list(thislist) 
+	print(mylist) # returns ['apple', 'banana', 'cherry'] 
+</tr></td></table>
+<b>The list() Constructor</b>
+It is also possible to use the list() constructor to make a new list. 
+<table>
+<pre style="font-size:110%">
+<table style="border:1px solid black">
+<tr> <td>
+Example Using the list() constructor to make a List: 
+	<b style="color:red">thislist </b>= list(("apple", "banana", "cherry")) # note the double round-brackets 
+	print(thislist) # returns ['apple', 'banana', 'cherry']
+
+</tr></td></table>
+
+<h3><u>List Methods</u></h3>
+Python has a set of built-in methods that you can use on lists/arrays. </ul></li>
+Method Description append() Adds an element at the end of the list</ul></li>
+<table>
+<pre style="font-size:110%">
+<table style="border:1px solid black">
+<tr> <td> 
+<li>clear() Removes all the elements from the list </li>
+<li>copy() Returns a copy of the list </li>
+<li>count() Returns the number of elements with the specified value </li>
+<li>extend() Add the elements of a list (or any iterable), to the end of the current list </li>
+<li>index() Returns the index of the first element with the specified value</li> 
+<li>insert() Adds an element at the specified position </li>
+<li>pop() Removes the element at the specified position</li>
+<li>remove() Removes the first item with the specified value </li>
+<li>reverse() Reverses the order of the list </li>
+<li>sort() Sorts the list</li>
+
+</tr>
+</td>
+</table>
+
+<h2><u>
+2. Python Tuple</u></h2>
+A tuple is a collection which is ordered and unchangeable. In Python tuples are written with round brackets.
+<table>
+<pre style="font-size:110%">
+<table style="border:1px solid black">
+<tr> <td>
+Example Create a Tuple: 
+	thistuple = ("apple", "banana", "cherry") 
+	print(thistuple) # returns ('apple', 'banana', 'cherry')
+</tr></td></table>
+<b>Access Tuple Items</b>
+You can access tuple items by referring to the index number, inside square brackets:
+<table>
+<pre style="font-size:110%">
+<table style="border:1px solid black">
+<tr> <td>
+Example Return the item in position 1: 
+	thistuple = ("apple", "banana", "cherry") 
+	print(thistuple[1]) # returns banana
+</tr></td></table>
+Change Tuple Values
+Once a tuple is created, you cannot change its values. Tuples are unchangeable.
+
+
+<b>Loop through a Tuple </b>
+You can loop through the tuple items by using a for loop.
+<table>
+<pre style="font-size:110%">
+<table style="border:1px solid black">
+<tr> <td>
+Example Iterate through the items and print the values:
+	thistuple = ("apple", "banana", "cherry") 
+	for x in thistuple: 
+	    print(x)
+</tr></td></table>
+<b>Check if Item Exists</b> 
+To determine if a specified item is present in a tuple use the in keyword:
+<table>
+<pre style="font-size:110%">
+<table style="border:1px solid black">
+<tr> <td>
+Example Check if "apple" is present in the tuple: 
+	thistuple = ("apple", "banana", "cherry") 
+	if "apple" in thistuple:
+	     print("Yes, 'apple' is in the fruits tuple")
+</tr></td></table>
+
+<b>Remove Items </b>
+Note: You cannot remove items in a tuple. Tuples are unchangeable, so you cannot remove items from it, but you can delete the tuple completely:
+<table>
+<pre style="font-size:110%">
+<table style="border:1px solid black">
+<tr> <td>
+Example The del keyword can delete the tuple completely:
+	thistuple = ("apple", "banana", "cherry") 
+	del thistuple
+</tr></td></table>
+
+
+<h2><u>3. Python Sets</u></h2>
+A set is a collection which is unordered and unindexed. In Python sets are written with curly brackets.
+<table>
+<pre style="font-size:110%">
+<table style="border:1px solid black">
+<tr> <td>
+Example Create a Set: 
+	thisset = {"apple", "banana", "cherry"}
+	print(thisset) # returns {'cherry', 'banana', 'apple'}
+</tr></td></table>
+<b>Note:</b> Sets are unordered, so you cannot be sure in which order the items will appear.
+
+<b>Access Items</b>
+You cannot access items in a set by referring to an index, since sets are unordered the items has no index.
+But you can loop through the set items using a for loop, or ask if a specified value is present in a set, by using the in keyword. 
+<pre style="font-size:110%">
+<table style="border:1px solid black">
+<tr> <td>
+Example Loop through the set, and print the values:
+	thisset = {"apple", "banana", "cherry"} 
+	for x in thisset: 
+	    print(x)
+</tr></td></table>
+
+
+<b>Change Items</b>
+Once a set is created, you cannot change its items, but you can add new items.
+
+<b>Add Items </b>
+To add one item to a set use the add() method. 
+To add more than one item to a set use the update() method. 
+
+<pre style="font-size:110%">
+<table style="border:1px solid black">
+<tr> <td>
+Example Add an item to a set, using the add() method:
+	thisset = {"apple", "banana", "cherry"} thisset.add("orange") 
+	print(thisset) # returns {'apple', 'cherry', 'orange', 'banana'}
+</tr></td></table>
+
+<b>Remove Item</b> 
+To remove an item in a set, use the remove(), or the discard() method. 
+<pre style="font-size:100%">
+<table style="border:1px solid black">
+<tr> <td>
+Example Remove "banana" by using the remove() method: 
+	thisset = {"apple", "banana", "cherry"} 
+	thisset.remove("banana")
+	print(thisset) # returns {'cherry', 'apple'}
+</tr></td></table>
+<b>Note:</b> Sets are unordered, so when using the pop() method, you will not know which item that gets removed.
+<pre style="font-size:100%">
+<table style="border:1px solid black">
+<tr> <td>
+Example The clear() method empties the set: 
+	thisset = {"apple", "banana", "cherry"} 
+	thisset.clear() 
+	print(thisset) # returns set()
+</tr></td></table>
+
+
+<h2><u>4. Python Dictionaries</u> </h2>
+A dictionary is a collection which is unordered, changeable and indexed. In Python dictionaries are written with curly brackets, 
+and they have keys and values.
+<pre style="font-size:100%">
+<table style="border:1px solid black">
+<tr> <td>
+Example Create and print a dictionary: 
+	<b style="color:lightblue">thisdict</b> = { 
+	 "brand": "Ford",
+	 "model": "Mustang",
+	  "year": 1964
+ } 
+	print(thisdict) # returns {'brand': 'Ford', 'model': 'Mustang', 'year': 1964}
+</tr></td></table>
+<b>Accessing Items</b> 
+You can access the items of a dictionary by referring to its key name, inside square brackets: 
+<pre style="font-size:100%">
+<table style="border:1px solid black">
+<tr> <td>
+Example Get the value of the "model" key: 
+	<i>x = thisdict["model"]</i> 
+There is also a method called get() that will give you the same result: 
+Example Get the value of the "model" key: 
+	<i>x = thisdict.get("model")</i>
+
+</tr></td></table>
+
+<b>Loop Through a Dictionary</b>
+You can loop through a dictionary by using a for loop. When looping through a dictionary, the return value are the keys of 
+the dictionary,but there are methods to return the values as well. Example Print all key names in the dictionary, one by one:
+
+	for <b style="color:red">x</b> in thisdict: 
+	    <b style="color:green">print</b>(x) 
+<i>Example Print all values in the dictionary, one by one:</i> 
+	for <b style="color:red">x</b> in thisdict: 
+	    <b style="color:green">print</b>(thisdict[x])
+
+<b>Check if Key Exists</b>
+To determine if a specified key is present in a dictionary use the in keyword:
+<pre style="font-size:100%">
+<table style="border:1px solid black">
+<tr> <td>
+Example Check if "model" is present in the dictionary: 
+	thisdict = <b style="color:green">{ "brand": "Ford", "model": "Mustang", "year": 1964 }</b>
+	if "model" in thisdict: 
+	    print("Yes, 'model' is one of the keys in the thisdict dictionary")
+</tr></td></table>
+<b>Adding Items</b> 
+Adding an item to the dictionary is done by using a new index key and assigning a value to it: 
+<pre style="font-size:100%">
+<table style="border:1px solid black">
+<tr> <td>
+Example 
+	<b style="color:red">thisdict </b>= { "brand": "Ford", "model": "Mustang", "year": 1964 } 
+	<b style="color:red">thisdict </b>["color"] = "red" 
+	print(thisdict) 
+</tr></td></table>
+<b>Removing Items </b>
+There are several methods to remove items from a dictionary: 
+<pre style="font-size:100%">
+<table style="border:1px solid black">
+<tr> <td>
+Example The pop() method removes the item with the specified key name: 
+	thisdict = { "brand": "Ford", "model": "Mustang", "year": 1964 } 
+	thisdict.pop("model") 
+	print(thisdict)
+</tr></td></table>
+
+<b>The dict() Constructor </b>
+It is also possible to use the dict() constructor to make a new dictionary: 
+Example 
+	thisdict = dict(brand="Ford", model="Mustang", year=1964) 
+<i>	<b style="color:orange"># note that keywords are not string literals </b>
+	<b style="color:orange"># note the use of equals rather than colon for the assignment</b></i>
+	print(thisdict)
+
+</p>
+</table><table style="border:2px solid green"><tr><td><a href="content.html">Back</a></td></tr></table>
+
+</body>
+</html>
